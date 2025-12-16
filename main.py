@@ -17,15 +17,15 @@ models = [
     # "openrouter/qwen/qwen3-vl-8b-instruct",
 ]
 
-# if run_benchmark( # Returns True on success
-#     prompt=prompt,
-#     models=models
-# ): # Other args: system, images_dir, log_dir, temperature, max_tokens
-#     print("Benchmark completed successfully.")
+if run_benchmark( # Returns True on success
+    prompt=prompt,
+    models=models
+): # Other args: system, images_dir, log_dir, temperature, max_tokens
+    print("Benchmark completed successfully.")
 
-generate_table_files(
-    do_accuracy=True,
-    do_models=True,
-    do_answers=True
-)
+    generate_table_files(
+        do_accuracy=True,
+        do_models=True,
+        do_answers=True
+    )
     # Requires paths for logs, images, and output folders - pass as args log_dir, images_dir, output_dir, defaults are "logs/", "images/", "tables/" respectively
